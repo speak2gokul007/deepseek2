@@ -1,0 +1,77 @@
+/* Base Styles */
+:root {
+  --primary: #2d3748;
+  --secondary: #4a5568;
+  --accent: #e6640b;
+  --bg: #ffffff;
+  --text: #2d3748;
+  --sidebar-bg: #f7fafc;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  margin: 0;
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 280px;
+  background: var(--sidebar-bg);
+  padding: 2rem;
+  border-right: 1px solid #e2e8f0;
+}
+
+/* Typewriter */
+.typewriter-container {
+  font-family: 'Courier New', monospace;
+  font-size: 1.8rem;
+  min-height: 2.5rem;
+  margin: 1rem 0;
+}
+
+.typewriter-cursor {
+  animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* Cards */
+.project-card, .publication-card {
+  background: var(--bg);
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.tech-tags span {
+  background: #edf2f7;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  margin-right: 0.5rem;
+  font-size: 0.9rem;
+}
+
+/* Dark Mode */
+body.dark-mode {
+  --bg: #1a202c;
+  --text: #f8fafc;
+  --sidebar-bg: #2d3748;
+  --accent: #4fd1c5;
+}
+
+.dark-mode .project-card,
+.dark-mode .publication-card {
+  border-color: #4a5568;
+}
+
+.dark-mode .tech-tags span {
+  background: #2d3748;
+}
